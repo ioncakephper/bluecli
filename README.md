@@ -153,7 +153,7 @@ commands:
 
 ---
 
-## Helpful Scripts
+## 📜 Helpful Scripts
 
 <!-- doc-gen SCRIPTS -->
 
