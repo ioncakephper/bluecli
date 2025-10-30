@@ -1,0 +1,9 @@
+name: mycli
+version: 1.0.0
+description: Base CLI
+commands:
+  - name: build
+    description: Build the project
+    options:
+      - name: --watch
+        type: boolean
