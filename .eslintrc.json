@@ -1,0 +1,17 @@
+{
+  "env": {
+    "commonjs": true,
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:json/recommended",
+    "plugin:yml/standard"
+  ],
+  "plugins": ["json", "yml"],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  }
+}
