@@ -1,0 +1,40 @@
+{
+  "name": "bluecli",
+  "version": "0.1.0",
+  "description": "A CLI generator for CLIs, powered by commander.js with declarative configs and template engines.",
+  "bin": {
+    "bluecli": "./bin/bluecli.js"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "start": "node ./bin/bluecli.js",
+    "dev": "nodemon ./bin/bluecli.js",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "keywords": [
+    "cli",
+    "generator",
+    "commander",
+    "templates",
+    "ejs",
+    "handlebars",
+    "yaml",
+    "json",
+    "declare"
+  ],
+  "author": "Ion Gireada",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "commander": "^11.0.0",
+    "ejs": "^3.1.9",
+    "handlebars": "^4.7.8",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2"
+  }
+}
