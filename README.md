@@ -175,7 +175,7 @@ commands:
 
 MIT © 2025 Your Name
 
-## Acknowlegdements
+## 🙏 Acknowlegdements
 
 <!-- doc-gen ACKNOWLEDGEMENTS -->
 
@@ -200,7 +200,7 @@ MIT © 2025 Your Name
 
 <!-- end-doc-gen -->
 
-## Project Structure
+## 🏗️ Project Structure
 
 <!-- doc-gen fileTreeExtended showSize=true showDescriptions=true -->
 
