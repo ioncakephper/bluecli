@@ -207,20 +207,20 @@ MIT © 2025 Your Name
 ```
 bluecli/
 ├── .qodo
-│   ├── agents
-│   └── workflows
+│   ├── agents                           # Contains agent configurations for the Qodoc tool.
+│   └── workflows                        # Contains workflow definitions for the Qodoc tool.
 ├── bin
 │   └── bluecli.js (64 B)                # Entry point for the BlueCLI application.
-├── .eslintignore (31 B)
-├── .eslintrc.json (283 B)
-├── .gitignore (2.1 KB)
-├── .prettierignore (31 B)
-├── .prettierrc.json (69 B)
-├── LICENSE (1.1 KB)
-├── markdown-magic.config.js (1.1 KB)    # Configuration file for Markdown Magic to automate README generation.
-├── package-lock.json (189.3 KB)
+├── .eslintignore (31 B)                 # Specifies files and directories that ESLint should ignore.
+├── .eslintrc.json (283 B)               # Configuration file for ESLint, defining code linting rules.
+├── .gitignore (2.1 KB)                  # Specifies intentionally untracked files that Git should ignore.
+├── .prettierignore (31 B)               # Specifies files and directories that Prettier should ignore.
+├── .prettierrc.json (69 B)              # Configuration file for Prettier, defining code formatting rules.
+├── LICENSE (1.1 KB)                     # Contains the licensing information for the project.
+├── markdown-magic.config.js (1.7 KB)    # Configuration file for Markdown Magic to automate README generation.
+├── package-lock.json (189.3 KB)         # Records the exact versions of dependencies, ensuring consistent installations.
 ├── package.json (2.0 KB)                # NPM package configuration file with metadata and dependencies.
-└── README.md (11.0 KB)                  # The main documentation file for the BlueCLI project.
+└── README.md (10.9 KB)                  # The main documentation file for the BlueCLI project.
 ```
 
 <!-- end-doc-gen -->
