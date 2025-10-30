@@ -26,10 +26,10 @@ Inspired by oclif, but built on [commander.js](https://github.com/tj/commander.j
 - [📝 Example Config (`cli.yaml`)](#example-config-cliyaml)
 - [🧩 Extending Configs](#extending-configs)
 - [🤝 Contributing](#contributing)
-- [Helpful Scripts](#helpful-scripts)
+- [📜 Helpful Scripts](#helpful-scripts)
 - [📜 License](#license)
-- [Acknowlegdements](#acknowlegdements)
-- [Project Structure](#project-structure)
+- [🙏 Acknowlegdements](#acknowlegdements)
+- [🏗️ Project Structure](#project-structure)
 <!-- end-doc-gen -->
 
 ---
@@ -220,7 +220,7 @@ bluecli/
 ├── markdown-magic.config.js (1.1 KB)    # Configuration file for Markdown Magic to automate README generation.
 ├── package-lock.json (189.3 KB)
 ├── package.json (2.0 KB)                # NPM package configuration file with metadata and dependencies.
-└── README.md (10.5 KB)                  # The main documentation file for the BlueCLI project.
+└── README.md (11.0 KB)                  # The main documentation file for the BlueCLI project.
 ```
 
 <!-- end-doc-gen -->
