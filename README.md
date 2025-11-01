@@ -5,12 +5,15 @@ It lets you define your CLI’s structure, commands, and plugins using **YAML, J
 Inspired by oclif, but built on [commander.js](https://github.com/tj/commander.js) for simplicity and flexibility.
 
 <!-- doc-gen BADGES style=for-the-badge -->
+
 [![npm version](https://img.shields.io/npm/v/bluecli.svg?style=for-the-badge)](https://www.npmjs.com/package/bluecli) [![npm downloads](https://img.shields.io/npm/dw/bluecli.svg?style=for-the-badge)](https://www.npmjs.com/package/bluecli) [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://www.npmjs.com/package/bluecli) [![actions status](https://img.shields.io/github/actions/workflow/status/ioncakephper/bluecli/ci.yml?branch=main&style=for-the-badge)](https://github.com/ioncakephper/bluecli/actions) [![codecov](https://img.shields.io/codecov/c/github/ioncakephper/bluecli?branch=main&style=for-the-badge)](https://codecov.io/gh/ioncakephper/bluecli) [![release](https://img.shields.io/github/v/release/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/releases) [![maintained](https://img.shields.io/github/commit-activity/y/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/graphs/commit-activity) [![stars](https://img.shields.io/github/stars/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/stargazers) [![forks](https://img.shields.io/github/forks/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/network/members) [![watchers](https://img.shields.io/github/watchers/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/watchers) [![last commit](https://img.shields.io/github/last-commit/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/commits) [![contributors](https://img.shields.io/github/contributors/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/graphs/contributors) [![issues](https://img.shields.io/github/issues/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/issues) [![pull requests](https://img.shields.io/github/issues-pr/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/pulls) [![repo size](https://img.shields.io/github/repo-size/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli) [![top language](https://img.shields.io/github/languages/top/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli) [![languages](https://img.shields.io/github/languages/count/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/search?l=)
+
 <!-- end-doc-gen -->
 
 ## Table of Contents
 
 <!-- doc-gen TOC -->
+
 - [✨ Features](#features)
 - [🚀 Installation](#installation)
 - [🛠 Usage](#usage)
@@ -153,6 +156,7 @@ commands:
 ## 📜 Helpful Scripts
 
 <!-- doc-gen SCRIPTS format=list -->
+
 - `dev` — Run the CLI application in development mode with live reload. (line [27](./package.json#L27))
 
   ```bash
@@ -194,7 +198,8 @@ commands:
   ```bash
   jest
   ```
-<!-- end-doc-gen -->
+
+  <!-- end-doc-gen -->
 
 ---
 
@@ -205,6 +210,7 @@ MIT © 2025 Your Name
 ## 🙏 Acknowlegdements
 
 <!-- doc-gen ACKNOWLEDGEMENTS -->
+
 - [ajv](https://www.npmjs.com/package/ajv) — Another JSON Schema Validator
 - [commander](https://www.npmjs.com/package/commander) — the complete solution for node.js command-line programs
 - [ejs](https://www.npmjs.com/package/ejs) — Embedded JavaScript templates
@@ -229,6 +235,7 @@ MIT © 2025 Your Name
 ## 🏗️ Project Structure
 
 <!-- doc-gen fileTreeExtended showSize=true showDescriptions=true -->
+
 ```
 bluecli/
 ├── .qodo
@@ -262,4 +269,5 @@ bluecli/
 ├── package.json (2.2 KB)                 # NPM package configuration file with metadata and dependencies.
 └── README.md (11.5 KB)                   # The main documentation file for the BlueCLI project.
 ```
+
 <!-- end-doc-gen -->

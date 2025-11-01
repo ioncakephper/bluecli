@@ -1,5 +1,12 @@
 #!/usr/bin/env node
 
+/**
+ * @file bluecli.js
+ * @description This is the main entry point for the bluecli command-line interface.
+ * It sets up the Commander.js program, defines global options, and registers subcommands.
+ * @author Ion Gireada
+ */
+
 const { program } = require('commander')
 const pkg = require('../package.json')
 

@@ -1,4 +1,3 @@
-// const path = require('path')
 const { loadConfig } = require('../utils/config-loader')
 const { mergeConfigs } = require('../utils/merger')
 const { renderTemplate } = require('../utils/template-engine')
@@ -13,7 +12,6 @@ module.exports = (program) => {
   program
     .command('generate')
     .description('generate a new CLI project from config')
-    .argument('[config]', 'path to config file (YAML, JSON, or .declare.js)')
     .option(
       '-t, --template <name>',
       'template to use (minimal, standard, monorepo)'
@@ -21,6 +19,7 @@ module.exports = (program) => {
     .option('-e, --engine <engine>', 'template engine (ejs, hbs)')
     .action((configPath, options) => {
       const config = loadConfig(configPath || 'cli.yaml')
+
       const merged = mergeConfigs({}, config)
 
       const template = options.template || merged.template || 'minimal'

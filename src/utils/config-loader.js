@@ -1,3 +1,9 @@
+/**
+ * @fileoverview This module provides utility functions for loading configuration files
+ * in various formats (YAML, JSON, and JavaScript).
+ * It is designed to support the dynamic loading and parsing of CLI configuration.
+ */
+
 const fs = require('fs')
 const path = require('path')
 const yaml = require('js-yaml')

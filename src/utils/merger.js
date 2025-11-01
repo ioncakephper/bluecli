@@ -1,7 +1,14 @@
+/**
+ * @file merger.js
+ * @description This module provides functions for loading, merging, and resolving
+ * configuration files in various formats (YAML, JSON, JavaScript).
+ * It handles merging of nested structures like commands and plugins, and detects
+ * circular dependencies in extended configurations.
+ * @author Ion Gireada
+ */
+
 const fs = require('fs')
 const path = require('path')
-const yaml = require('js-yaml')
-
 
 /**
  * Loads a configuration file (YAML, JSON, or .declare.js) and parses its content.
@@ -13,7 +20,6 @@ function loadConfig(filePath) {
   const ext = path.extname(filePath)
   if (ext === '.yaml' || ext === '.yml') {
     // If the file is a YAML file, parse it using js-yaml
-    return yaml.load(fs.readFileSync(filePath, 'utf8'))
     // If the file is a JSON file, parse it as JSON
   } else if (ext === '.json') {
     return JSON.parse(fs.readFileSync(filePath, 'utf8'))
@@ -24,7 +30,6 @@ function loadConfig(filePath) {
   }
   throw new Error(`Unsupported config format: ${ext}`)
 }
-
 
 /**
  * Merges two configuration objects. Properties from the override object take precedence.
@@ -72,7 +77,6 @@ function mergeConfigs(base, override) {
   return result
 }
 
-
 /**
  * Helper function to merge arrays of objects based on their 'name' property.
  * Items in overrideArr will take precedence over items in baseArr if they have the same name.
@@ -88,7 +92,6 @@ function mergeByName(baseArr = [], overrideArr = []) {
   })
   return Object.values(merged)
 }
-
 
 /**
  * Resolves cascading configuration files, merging them in order of extension.

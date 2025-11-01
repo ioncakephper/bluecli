@@ -1,3 +1,9 @@
+/**
+ * @file file-writer.js
+ * @description This module provides utility functions for writing files to the filesystem.
+ * @author Ion Gireada
+ */
+
 const fs = require('fs')
 const path = require('path')
 

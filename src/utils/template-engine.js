@@ -1,3 +1,9 @@
+/**
+ * @file template-engine.js
+ * @description This module provides utility functions for rendering templates using EJS or Handlebars.
+ * @author Ion Gireada
+ */
+
 const fs = require('fs')
 const path = require('path')
 const ejs = require('ejs')
