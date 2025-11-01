@@ -5,15 +5,12 @@ It lets you define your CLI’s structure, commands, and plugins using **YAML, J
 Inspired by oclif, but built on [commander.js](https://github.com/tj/commander.js) for simplicity and flexibility.
 
 <!-- doc-gen BADGES style=for-the-badge -->
-
 [![npm version](https://img.shields.io/npm/v/bluecli.svg?style=for-the-badge)](https://www.npmjs.com/package/bluecli) [![npm downloads](https://img.shields.io/npm/dw/bluecli.svg?style=for-the-badge)](https://www.npmjs.com/package/bluecli) [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://www.npmjs.com/package/bluecli) [![actions status](https://img.shields.io/github/actions/workflow/status/ioncakephper/bluecli/ci.yml?branch=main&style=for-the-badge)](https://github.com/ioncakephper/bluecli/actions) [![codecov](https://img.shields.io/codecov/c/github/ioncakephper/bluecli?branch=main&style=for-the-badge)](https://codecov.io/gh/ioncakephper/bluecli) [![release](https://img.shields.io/github/v/release/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/releases) [![maintained](https://img.shields.io/github/commit-activity/y/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/graphs/commit-activity) [![stars](https://img.shields.io/github/stars/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/stargazers) [![forks](https://img.shields.io/github/forks/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/network/members) [![watchers](https://img.shields.io/github/watchers/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/watchers) [![last commit](https://img.shields.io/github/last-commit/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/commits) [![contributors](https://img.shields.io/github/contributors/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/graphs/contributors) [![issues](https://img.shields.io/github/issues/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/issues) [![pull requests](https://img.shields.io/github/issues-pr/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/pulls) [![repo size](https://img.shields.io/github/repo-size/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli) [![top language](https://img.shields.io/github/languages/top/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli) [![languages](https://img.shields.io/github/languages/count/ioncakephper/bluecli?style=for-the-badge)](https://github.com/ioncakephper/bluecli/search?l=)
-
 <!-- end-doc-gen -->
 
 ## Table of Contents
 
 <!-- doc-gen TOC -->
-
 - [✨ Features](#features)
 - [🚀 Installation](#installation)
 - [🛠 Usage](#usage)
@@ -156,17 +153,15 @@ commands:
 ## 📜 Helpful Scripts
 
 <!-- doc-gen SCRIPTS -->
-
-| Script   | Command                                                                | Description                                                   | Line                     |
-| -------- | ---------------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------ |
-| `dev`    | `nodemon ./bin/bluecli.js`                                             | Run the CLI application in development mode with live reload. | [21](./package.json#L21) |
-| `docs`   | `npx markdown-magic@3.7.0 **/*.md --config ./markdown-magic.config.js` | Generate documentation from markdown files.                   | [19](./package.json#L19) |
-| `format` | `prettier --write .`                                                   | Format all files in the project.                              | [23](./package.json#L23) |
-| `lint`   | `eslint .`                                                             | Lint all files in the project.                                | [22](./package.json#L22) |
-| `prep`   | `npm run docs && npm run lint && npm run format`                       | Prepare the project for a new release.                        | [24](./package.json#L24) |
-| `start`  | `node ./bin/bluecli.js`                                                | Run the CLI application.                                      | [20](./package.json#L20) |
-| `test`   | `jest`                                                                 | Run the test suite.                                           | [25](./package.json#L25) |
-
+| Script | Command | Description | Line |
+| -------- | -------- | -------- | -------- |
+| `dev` | `nodemon ./bin/bluecli.js` | Run the CLI application in development mode with live reload. | [27](./package.json#L27) |
+| `docs` | `npx markdown-magic@3.7.0 **/*.md --config ./markdown-magic.config.js` | Generate documentation from markdown files. | [25](./package.json#L25) |
+| `format` | `prettier --write .` | Format all files in the project. | [29](./package.json#L29) |
+| `lint` | `eslint .` | Lint all files in the project. | [28](./package.json#L28) |
+| `prep` | `npm run docs && npm run lint && npm run format` | Prepare the project for a new release. | [30](./package.json#L30) |
+| `start` | `node ./bin/bluecli.js` | Run the CLI application. | [26](./package.json#L26) |
+| `test` | `jest` | Run the test suite. | [31](./package.json#L31) |
 <!-- end-doc-gen -->
 
 ---
@@ -178,7 +173,6 @@ MIT © 2025 Your Name
 ## 🙏 Acknowlegdements
 
 <!-- doc-gen ACKNOWLEDGEMENTS -->
-
 - [ajv](https://www.npmjs.com/package/ajv) — Another JSON Schema Validator
 - [commander](https://www.npmjs.com/package/commander) — the complete solution for node.js command-line programs
 - [ejs](https://www.npmjs.com/package/ejs) — Embedded JavaScript templates
@@ -203,24 +197,37 @@ MIT © 2025 Your Name
 ## 🏗️ Project Structure
 
 <!-- doc-gen fileTreeExtended showSize=true showDescriptions=true -->
-
 ```
 bluecli/
 ├── .qodo
-│   ├── agents                           # Contains agent configurations for the Qodoc tool.
-│   └── workflows                        # Contains workflow definitions for the Qodoc tool.
+│   ├── agents                            # Contains agent configurations for the Qodoc tool.
+│   └── workflows                         # Contains workflow definitions for the Qodoc tool.
 ├── bin
-│   └── bluecli.js (64 B)                # Entry point for the BlueCLI application.
-├── .eslintignore (31 B)                 # Specifies files and directories that ESLint should ignore.
-├── .eslintrc.json (283 B)               # Configuration file for ESLint, defining code linting rules.
-├── .gitignore (2.1 KB)                  # Specifies intentionally untracked files that Git should ignore.
-├── .prettierignore (31 B)               # Specifies files and directories that Prettier should ignore.
-├── .prettierrc.json (69 B)              # Configuration file for Prettier, defining code formatting rules.
-├── LICENSE (1.1 KB)                     # Contains the licensing information for the project.
-├── markdown-magic.config.js (1.7 KB)    # Configuration file for Markdown Magic to automate README generation.
-├── package-lock.json (189.3 KB)         # Records the exact versions of dependencies, ensuring consistent installations.
-├── package.json (2.0 KB)                # NPM package configuration file with metadata and dependencies.
-└── README.md (10.9 KB)                  # The main documentation file for the BlueCLI project.
+│   └── bluecli.js (657 B)                # Entry point for the BlueCLI application.
+├── src
+│   ├── commands
+│   │   ├── generate.js (1.2 KB)
+│   │   ├── list-templates.js (424 B)
+│   │   └── validate.js (664 B)
+│   └── utils
+│       ├── config-loader.js (536 B)
+│       ├── file-writer.js (404 B)
+│       ├── merger.js (2.6 KB)
+│       └── template-engine.js (785 B)
+├── templates
+│   ├── minimal
+│   ├── monorepo
+│   └── standard
+├── .eslintignore (31 B)                  # Specifies files and directories that ESLint should ignore.
+├── .eslintrc.json (283 B)                # Configuration file for ESLint, defining code linting rules.
+├── .gitignore (2.1 KB)                   # Specifies intentionally untracked files that Git should ignore.
+├── .prettierignore (31 B)                # Specifies files and directories that Prettier should ignore.
+├── .prettierrc.json (69 B)               # Configuration file for Prettier, defining code formatting rules.
+├── cli.yaml (167 B)
+├── LICENSE (1.1 KB)                      # Contains the licensing information for the project.
+├── markdown-magic.config.js (1.6 KB)     # Configuration file for Markdown Magic to automate README generation.
+├── package-lock.json (188.0 KB)          # Records the exact versions of dependencies, ensuring consistent installations.
+├── package.json (2.1 KB)                 # NPM package configuration file with metadata and dependencies.
+└── README.md (12.0 KB)                   # The main documentation file for the BlueCLI project.
 ```
-
 <!-- end-doc-gen -->
