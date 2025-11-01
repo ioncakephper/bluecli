@@ -2,6 +2,12 @@
   "name": "bluecli",
   "version": "0.1.0",
   "description": "A CLI generator for CLIs, powered by commander.js with declarative configs and template engines.",
+  "files": [
+    "bin",
+    "src",
+    "templates",
+    "cli.yaml"
+  ],
   "bin": {
     "bluecli": "./bin/bluecli.js"
   },

@@ -7,13 +7,13 @@ const { writeFiles } = require('../utils/file-writer')
 module.exports = (program) => {
   program
     .command('generate')
-    .description('Generate a new CLI project from config')
-    .argument('[config]', 'Path to config file (YAML, JSON, or .declare.js)')
+    .description('generate a new CLI project from config')
+    .argument('[config]', 'path to config file (YAML, JSON, or .declare.js)')
     .option(
       '-t, --template <name>',
-      'Template to use (minimal, standard, monorepo)'
+      'template to use (minimal, standard, monorepo)'
     )
-    .option('-e, --engine <engine>', 'Template engine (ejs, hbs)')
+    .option('-e, --engine <engine>', 'template engine (ejs, hbs)')
     .action((configPath, options) => {
       const config = loadConfig(configPath || 'cli.yaml')
       const merged = mergeConfigs({}, config)
