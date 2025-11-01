@@ -1,0 +1,28 @@
+{
+    "name": "{{projectName}}",
+    "version": "1.0.0",
+    "description": "{{description}}",
+    "main": "src/index.js",
+    "scripts": {
+        "start:empty": "node bin/cli.js"
+        "start": "node bin/cli.js hello --name World --greet --excited",
+        "docs": "npx markdown-magic@3.7.0 **/*.md --config md.config.js",
+        "precommit": "npm run docs && npx lint-staged && npm run format",
+        "format": "npx prettier --write .",
+        "test": "jest --passWithNoTests"
+    },
+    "bin": {
+        "{{projectName}}": "./bin/cli.js"
+    },
+    "author": "{{author}}",
+    "license": "MIT",
+    "dependencies": {
+        "commander": "^9.4.0"
+    },
+    "devDependencies": {
+        "jest": "^29.2.1",
+        "lint-staged": "^13.0.3",
+        "prettier": "^2.7.1",
+        "prettier-plugin-packagejson": "^2.5.19",
+    },
+}
