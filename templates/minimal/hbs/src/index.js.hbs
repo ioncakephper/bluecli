@@ -1,0 +1,42 @@
+/**
+ * @file index.js
+ * @description This is the main entry point for the CLI application.
+ * It sets up the Commander.js program, loads commands, and parses arguments.
+ * @author Ion Gireada
+ */
+
+const { Command } = require('commander')
+const cosmiconfig = require('cosmiconfig')
+const loadCommands = require('../src/utils/loadCommands')
+
+let program = new Command()
+
+try {
+  require('../../../package.json')
+} catch (e) {
+  console.error('Could not load package.json:', e)
+  process.exit(1)
+}
+
+const { name, version, description } = require('../../../package.json')
+
+program.name(name).description(description).version(version)
+
+program
+  .option('-v, --verbose', 'enable verbose logging')
+  .option('--debug', 'enable debug logging')
+  .option('--quiet', 'disable all logging')
+  .option(
+    '-c, --config <path>',
+    'path to config file',
+    cosmiconfig(name).searchSync().filepath
+  )
+
+loadCommands(program)
+
+program.configureHelp({
+  sortSubcommands: true,
+  sortOptions: true,
+})
+
+program.parse(process.argv)

@@ -1,0 +1,32 @@
+/**
+ * @file index.js
+ * @description Registers the '{{{command.name}}}' command with the Commander program.
+ * @author Ion Gireada
+ */
+
+const action = require('./action')
+
+/**
+ * Registers the '{{{command.name}}}' command with the Commander program.
+ *
+ * @param {object} program - The Commander.js program object.
+ */
+module.exports = (program) => {
+  program
+    .command('{{{command.name}}}')
+    .description('{{{command.description}}}')
+    .argument('[name]', 'Name to greet', 'World')
+    .option('-n, --name <name>', 'Your name')
+    .option('-g, --greet', 'Include a greeting message')
+    .option('-e, --excited', 'Add excitement to the message')
+    {{array items}}
+    {{#each arguments as |arg|}}
+      {{push items arg.name}}
+    {{/each}}
+    {{#if command.options}}
+        {{push items "options"}}
+    {{/if}}
+    .action(({{{join items ", "}}}) => {
+      action({{{join items ", "}}})
+    })
+}
