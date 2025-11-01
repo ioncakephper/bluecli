@@ -260,6 +260,6 @@ bluecli/
 ├── markdown-magic.config.js (1.6 KB)     # Configuration file for Markdown Magic to automate README generation.
 ├── package-lock.json (193.2 KB)          # Records the exact versions of dependencies, ensuring consistent installations.
 ├── package.json (2.2 KB)                 # NPM package configuration file with metadata and dependencies.
-└── README.md (11.6 KB)                   # The main documentation file for the BlueCLI project.
+└── README.md (11.5 KB)                   # The main documentation file for the BlueCLI project.
 ```
 <!-- end-doc-gen -->
