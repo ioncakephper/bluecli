@@ -2,6 +2,11 @@ const fs = require('fs')
 const path = require('path')
 
 module.exports = (program) => {
+  /**
+   * Lists all available CLI templates.
+   *
+   * @param {object} program - The Commander.js program object.
+   */
   program
     .command('list-templates')
     .description('List available CLI templates')

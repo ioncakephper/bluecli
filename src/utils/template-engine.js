@@ -3,6 +3,13 @@ const path = require('path')
 const ejs = require('ejs')
 const Handlebars = require('handlebars')
 
+/**
+ * Renders a template using the specified engine and configuration.
+ *
+ * @param {string} templateName - The name of the template to render.
+ * @param {'ejs'|'hbs'} engine - The template engine to use ('ejs' or 'hbs').
+ * @param {object} config - The configuration object to pass to the template.
+ */
 function renderTemplate(templateName, engine, config) {
   const templateDir = path.resolve(
     __dirname,

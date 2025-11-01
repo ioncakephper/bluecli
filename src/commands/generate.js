@@ -5,6 +5,11 @@ const { renderTemplate } = require('../utils/template-engine')
 const { writeFiles } = require('../utils/file-writer')
 
 module.exports = (program) => {
+  /**
+   * Generates a new CLI project from a configuration file.
+   *
+   * @param {object} program - The Commander.js program object.
+   */
   program
     .command('generate')
     .description('generate a new CLI project from config')

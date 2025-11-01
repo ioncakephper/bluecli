@@ -2,20 +2,42 @@ const fs = require('fs')
 const path = require('path')
 const yaml = require('js-yaml')
 
-// Load a config file (YAML, JSON, or .declare.js)
+
+/**
+ * Loads a configuration file (YAML, JSON, or .declare.js) and parses its content.
+ *
+ * @param {string} filePath - The path to the configuration file.
+ * @returns {object} The parsed configuration object.
+ */
 function loadConfig(filePath) {
   const ext = path.extname(filePath)
   if (ext === '.yaml' || ext === '.yml') {
+    // If the file is a YAML file, parse it using js-yaml
     return yaml.load(fs.readFileSync(filePath, 'utf8'))
+    // If the file is a JSON file, parse it as JSON
   } else if (ext === '.json') {
     return JSON.parse(fs.readFileSync(filePath, 'utf8'))
+    // If the file is a JavaScript file, require it
   } else if (ext === '.js' || ext === '.declare.js') {
     return require(path.resolve(filePath))
+    // If the file extension is not supported, throw an error
   }
   throw new Error(`Unsupported config format: ${ext}`)
 }
 
-// Merge two configs (base ← override)
+
+/**
+ * Merges two configuration objects. Properties from the override object take precedence.
+ *
+ * This function performs a shallow merge for most properties.
+ * However, it includes special handling for 'commands' and 'plugins' arrays,
+ * merging them by their 'name' property to allow for overriding or extending
+ * individual commands or plugins.
+ *
+ * @param {object} base - The base configuration object.
+ * @param {object} override - The override configuration object.
+ * @returns {object} The merged configuration object.
+ */
 function mergeConfigs(base, override) {
   const result = { ...base, ...override }
 
@@ -50,7 +72,14 @@ function mergeConfigs(base, override) {
   return result
 }
 
-// Helper: merge arrays of objects by "name"
+
+/**
+ * Helper function to merge arrays of objects based on their 'name' property.
+ * Items in overrideArr will take precedence over items in baseArr if they have the same name.
+ *
+ * @param {Array<object>} baseArr - The base array of objects.
+ * @param {Array<object>} overrideArr - The array of objects to override the base.
+ */
 function mergeByName(baseArr = [], overrideArr = []) {
   const merged = {}
   baseArr.forEach((item) => (merged[item.name] = { ...item }))
@@ -60,7 +89,15 @@ function mergeByName(baseArr = [], overrideArr = []) {
   return Object.values(merged)
 }
 
-// Resolve cascading configs
+
+/**
+ * Resolves cascading configuration files, merging them in order of extension.
+ * Detects and throws an error for circular dependencies.
+ *
+ * @param {string} filePath - The path to the initial configuration file.
+ * @param {Set<string>} [seen=new Set()] - A set to keep track of already processed file paths to detect circular dependencies.
+ * @returns {object} The fully resolved and merged configuration object.
+ */
 function resolveConfig(filePath, seen = new Set()) {
   if (seen.has(filePath)) {
     throw new Error(`Circular extends detected: ${filePath}`)
