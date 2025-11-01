@@ -152,16 +152,48 @@ commands:
 
 ## 📜 Helpful Scripts
 
-<!-- doc-gen SCRIPTS -->
-| Script | Command | Description | Line |
-| -------- | -------- | -------- | -------- |
-| `dev` | `nodemon ./bin/bluecli.js` | Run the CLI application in development mode with live reload. | [27](./package.json#L27) |
-| `docs` | `npx markdown-magic@3.7.0 **/*.md --config ./markdown-magic.config.js` | Generate documentation from markdown files. | [25](./package.json#L25) |
-| `format` | `prettier --write .` | Format all files in the project. | [29](./package.json#L29) |
-| `lint` | `eslint .` | Lint all files in the project. | [28](./package.json#L28) |
-| `prep` | `npm run docs && npm run lint && npm run format` | Prepare the project for a new release. | [30](./package.json#L30) |
-| `start` | `node ./bin/bluecli.js` | Run the CLI application. | [26](./package.json#L26) |
-| `test` | `jest` | Run the test suite. | [31](./package.json#L31) |
+<!-- doc-gen SCRIPTS format=list -->
+- `dev` — Run the CLI application in development mode with live reload. (line [27](./package.json#L27))
+
+  ```bash
+  nodemon ./bin/bluecli.js
+  ```
+
+- `docs` — Generate documentation from markdown files. (line [25](./package.json#L25))
+
+  ```bash
+  npx markdown-magic@3.7.0 **/*.md --config ./markdown-magic.config.js
+  ```
+
+- `format` — Format all files in the project. (line [29](./package.json#L29))
+
+  ```bash
+  prettier --write .
+  ```
+
+- `lint` — Lint all files in the project. (line [28](./package.json#L28))
+
+  ```bash
+  eslint .
+  ```
+
+- `prep` — Prepare the project for a new release. (line [30](./package.json#L30))
+
+  ```bash
+  npm run docs && npm run lint && npm run format
+  ```
+
+- `start` — Run the CLI application. (line [26](./package.json#L26))
+
+  ```bash
+  node ./bin/bluecli.js
+  ```
+
+- `test` — Run the test suite. (line [31](./package.json#L31))
+
+  ```bash
+  jest
+  ```
 <!-- end-doc-gen -->
 
 ---
@@ -203,17 +235,17 @@ bluecli/
 │   ├── agents                            # Contains agent configurations for the Qodoc tool.
 │   └── workflows                         # Contains workflow definitions for the Qodoc tool.
 ├── bin
-│   └── bluecli.js (657 B)                # Entry point for the BlueCLI application.
+│   └── bluecli.js (683 B)                # Entry point for the BlueCLI application.
 ├── src
 │   ├── commands
 │   │   ├── generate.js (1.2 KB)
-│   │   ├── list-templates.js (424 B)
-│   │   └── validate.js (664 B)
+│   │   ├── list-templates.js (438 B)
+│   │   └── validate.js (686 B)
 │   └── utils
-│       ├── config-loader.js (536 B)
-│       ├── file-writer.js (404 B)
-│       ├── merger.js (2.6 KB)
-│       └── template-engine.js (785 B)
+│       ├── config-loader.js (553 B)
+│       ├── file-writer.js (418 B)
+│       ├── merger.js (2.7 KB)
+│       └── template-engine.js (816 B)
 ├── templates
 │   ├── minimal
 │   ├── monorepo
@@ -223,11 +255,11 @@ bluecli/
 ├── .gitignore (2.1 KB)                   # Specifies intentionally untracked files that Git should ignore.
 ├── .prettierignore (31 B)                # Specifies files and directories that Prettier should ignore.
 ├── .prettierrc.json (69 B)               # Configuration file for Prettier, defining code formatting rules.
-├── cli.yaml (167 B)
+├── cli.yaml (176 B)
 ├── LICENSE (1.1 KB)                      # Contains the licensing information for the project.
 ├── markdown-magic.config.js (1.6 KB)     # Configuration file for Markdown Magic to automate README generation.
-├── package-lock.json (188.0 KB)          # Records the exact versions of dependencies, ensuring consistent installations.
-├── package.json (2.1 KB)                 # NPM package configuration file with metadata and dependencies.
-└── README.md (12.0 KB)                   # The main documentation file for the BlueCLI project.
+├── package-lock.json (193.2 KB)          # Records the exact versions of dependencies, ensuring consistent installations.
+├── package.json (2.2 KB)                 # NPM package configuration file with metadata and dependencies.
+└── README.md (11.6 KB)                   # The main documentation file for the BlueCLI project.
 ```
 <!-- end-doc-gen -->
